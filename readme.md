@@ -19,5 +19,3 @@ past sut-snippet.json
 
 ## STEP 3
 <img src="https://user-images.githubusercontent.com/48860569/174387486-2213965d-8b35-4276-a892-1c7c0496b64a.png"/>
-
-
