@@ -1,0 +1,28 @@
+{
+    "Create SUT": {
+      "prefix": "sut",
+      "body": [
+        "import { ${TM_FILENAME_BASE/(.*?)\\..*/${1:/pascalcase}/} } from '@/${1:}/${TM_FILENAME_BASE/(.*?)\\..*/$1/}'",
+        "",
+        "type SutTypes = {",
+        "  sut: ${TM_FILENAME_BASE/(.*?)\\..*/${1:/pascalcase}/}",
+        "}",
+        "",
+        "const makeSut = (): SutTypes => {",
+        "  const sut = new ${TM_FILENAME_BASE/(.*?)\\..*/${1:/pascalcase}/}()",
+        "",
+        "  return {",
+        "    sut",
+        "  }",
+        "}",
+        "",
+        "describe('${TM_FILENAME_BASE/(.*?)\\..*/${1:/pascalcase}/}', () => {",
+        "  it('Should ', () => {",
+        "     const { sut } = makeSut()",
+        "     ",
+        "  })",
+        "})"
+      ],
+      "description": "Create SUT component"
+    }
+  }
